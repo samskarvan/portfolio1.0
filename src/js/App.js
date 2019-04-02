@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import logo from '../assets/logo.svg'
 
 import Header from './components/Header/Header.js'
 import Footer from './components/Footer/Footer.js'
