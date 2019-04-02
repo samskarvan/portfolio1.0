@@ -1,0 +1,105 @@
+@import '../../../scss/variables';
+
+.content-block {
+    background-color: $goldenrod;
+    padding: 10px;
+
+    &-container {
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        height: 100%;
+    }
+}
+
+.content-block-image {
+    background-image: url('../../../assets/parker_pool.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 80%;
+    margin-right: 30px;
+    // height: 100%;
+
+    &-text {
+        align-items: center;
+        background-color: $dust-grey;
+        color: $white;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        opacity: 0;
+        padding: 0 20px;
+        text-transform: uppercase;
+        transition: opacity 0.5s ease-in;
+    }
+
+    &:hover {
+        .content-block-image-text {
+            opacity: 0.8;
+            transition: opacity 0.5s ease-out;
+        }
+    }
+}
+
+.content-block-text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: left;
+
+    &-header {
+        margin: 0;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    p {
+        margin-bottom: 40px;
+    }
+
+    &-button {
+        align-self: center;
+        background-color: $goldenrod;
+        color: $white;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &.-left-align {
+            align-self: flex-end;
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background-color: $dust-grey;
+        }
+    }
+}
+
+@media screen and ($mobile-down) {
+    .content-block-container {
+        flex-direction: column;
+    }
+
+    .content-block-image {
+        height: 400px;
+        margin-right: 0;
+    }
+
+    .content-block-text {
+        text-align: center;
+
+        &-header {
+            margin-top: 20px;
+        }
+
+        &-button {
+            &.-left-align {
+                align-self: center;
+                margin-right: 0;
+            }
+        }
+    }
+}

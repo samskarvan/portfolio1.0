@@ -1,0 +1,49 @@
+@import '../../../scss/variables';
+
+.employee-block {
+    background-color: $dust-grey;
+    flex-basis: 50%;
+    height: 200px;
+
+    &:nth-of-type(2) {
+        margin-left: 10px;
+    }
+
+    &-text {
+        align-items: center;
+        background-color: $goldenrod;
+        color: $white;
+        display: flex;
+        height: 100%;
+        opacity: 0;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: $opacity-ease-in;
+
+        &.-clicked {
+            background-color: $dust-grey;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .employee-block-text {
+            opacity: 1;
+            transition: $opacity-ease-out;
+        }
+    }
+}
+
+@media screen and ($tablet-down) {
+    .employee-block {
+        &:nth-of-type(2) {
+            margin-left: 0;
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+}

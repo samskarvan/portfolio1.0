@@ -1,0 +1,23 @@
+@import '../../../scss/variables';
+
+.employee-grid {
+    &-container {
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        padding: 20px;
+    }
+}
+
+.employee-grid-block-container {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-evenly;
+}
+
+@media screen and ($tablet-down) {
+    .employee-grid-block-container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,96 @@
+@import '../../../scss/variables';
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    &-button {
+        align-self: center;
+        background-color: $goldenrod;
+        border: 0;
+        color: $white;
+        margin-top: 20px;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 25%;
+
+        &:hover {
+            background-color: $white;
+            color: $dust-grey;
+            cursor: pointer;
+        }
+    }
+
+    &-form {
+        background-color: $dust-grey;
+        color: $white;
+        display: flex;
+        flex-basis: 40%;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 20px;
+        padding: 20px;
+
+        &.-submitted {
+            min-height: 400px;
+        }
+
+        &-header {
+            align-self: flex-start;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+
+            label {
+                align-self: flex-start;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+
+            input {
+                height: 40px;
+                padding-left: 10px;
+            }
+
+            textarea {
+                height: 100px;
+                padding: 10px;
+                resize: none;
+            }
+        }
+    }
+}
+
+.contact-form-image {
+    background-image: url('../../../assets/parker_pool.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 60%;
+    flex-grow: 1;
+}
+
+@media screen and ($tablet-down) {
+    .contact-form-container {
+        flex-direction: column;
+    }
+
+    .contact-form-form {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,24 @@
+@import '../../../scss/variables';
+
+.hero-banner {
+    background-image: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0) 70%
+        ),
+        url('../../../assets/parker_pool.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: -40px;
+    margin-bottom: 40px;
+    padding: 40px;
+}
+
+@media screen and ($desktop-down) {
+    .hero-banner {
+        margin: -20px;
+        margin-bottom: 20px;
+    }
+}

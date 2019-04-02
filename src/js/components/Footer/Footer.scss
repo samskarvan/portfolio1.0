@@ -1,0 +1,80 @@
+@import '../../../scss/variables';
+
+.footer {
+    background-color: $dust-grey;
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    padding: 40px;
+
+    &-item {
+        height: 100%;
+        padding: 20px;
+        width: 30%;
+        text-align: center;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+        &:nth-of-type(2) {
+            width: 40%;
+        }
+
+        &:last-of-type {
+            padding-right: 0;
+
+            .footer-list {
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        &:not(:last-of-type) {
+            border-right: 1px solid $white;
+        }
+    }
+
+    &-list {
+        color: $white;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media screen and ($mobile-down) {
+    .footer {
+        flex-direction: column;
+        height: auto;
+
+        &-item {
+            width: 100%;
+
+            &:first-of-type,
+            &:last-of-type {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+
+            &:not(:last-of-type) {
+                border-right: none;
+                border-bottom: 1px solid $white;
+            }
+        }
+
+        &:last-of-type {
+            .footer-list {
+                flex-direction: column;
+
+                li {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
