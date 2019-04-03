@@ -3,6 +3,7 @@
 .employee-grid {
     &-container {
         background-color: $white;
+        border: 2px solid $goldenrod;
         display: flex;
         flex-direction: column;
         // justify-content: space-between;
@@ -13,7 +14,7 @@
 .employee-grid-block-container {
     display: flex;
     flex-direction: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 @media screen and ($tablet-down) {

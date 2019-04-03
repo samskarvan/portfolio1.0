@@ -15,12 +15,11 @@ class Footer extends Component {
                           <li>Serving the Coachella Valley</li>`,
             },
             {
-                content: `<li>desertconciergecollective@gmail.com</li>
-                          <li>949.412.9200</li>`,
+                content: `<li>samskarvan@gmail.com</li>`,
             },
             {
-                content: `<li>instagram</li>
-                          <li>facebook</li>`,
+                content: `<li>github</li>
+                          <li>linkedin</li>`,
             },
         ]
 

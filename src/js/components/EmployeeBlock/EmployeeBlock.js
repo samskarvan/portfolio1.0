@@ -27,7 +27,7 @@ class EmployeeBlock extends Component {
     render() {
         const { blockClicked } = this.state
         const {
-            employeeInfo: { name, bio },
+            employeeInfo: { name, bio, link },
         } = this.props
         return (
             <div
@@ -36,7 +36,17 @@ class EmployeeBlock extends Component {
                 onMouseLeave={e => this.handleMouseLeave(e)}
             >
                 {blockClicked ? (
-                    <div className='employee-block-text -clicked'>{bio}</div>
+                    <div className='employee-block-text -clicked'>
+                        {bio}
+                        <a
+                            className='application-link'
+                            href={link}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            View Live Site
+                        </a>
+                    </div>
                 ) : (
                     <div className='employee-block-text'>{name}</div>
                 )}

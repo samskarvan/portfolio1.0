@@ -7,7 +7,7 @@ class Contact extends Component {
     render() {
         return (
             <Fragment>
-                <HeroBanner />
+                <HeroBanner heroBlurb={{ header: 'Get in touch' }} />
                 <ContactForm />
             </Fragment>
         )

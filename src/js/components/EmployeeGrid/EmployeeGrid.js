@@ -12,16 +12,18 @@ class EmployeeGrid extends Component {
     render() {
         const employees = [
             {
-                name: `Kerry Skarvan`,
+                name: `Fallout GameHub`,
                 bio: `Nori grape silver beet broccoli kombu beet greens fava
                         bean potato quandong celery. Bunya nuts black-eyed pea
                         prairie turnip leek lentil turnip greens parsnip.`,
+                link: `fallout.bethesda.net`,
             },
             {
-                name: `Toby Sudakoff`,
+                name: `ElderScrolls Gamehub`,
                 bio: `Nori grape silver beet broccoli kombu beet greens fava
                         bean potato quandong celery. Bunya nuts black-eyed pea
                         prairie turnip leek lentil turnip greens parsnip.`,
+                link: `https://elderscrolls.bethesda.net`,
             },
             ,
         ]
@@ -36,7 +38,7 @@ class EmployeeGrid extends Component {
         return (
             <div className='employee-grid section'>
                 <div className='employee-grid-container'>
-                    <h1 className='header'>Meet Our Team</h1>
+                    <h1 className='header'>Featured Applications</h1>
                     <div className='employee-grid-block-container'>
                         {employeeBlocks}
                     </div>

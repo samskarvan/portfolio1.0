@@ -52,10 +52,10 @@ class Header extends Component {
                             className='mobile-header-nav-list-item'
                             onClick={() => this.closeNav()}
                         >
-                            <NavLink to='/'>Logo</NavLink>
+                            <NavLink to='/'>Home</NavLink>
                         </li>
 
-                        <li
+                        {/* <li
                             className='mobile-header-nav-list-item'
                             onClick={() => this.closeNav()}
                         >
@@ -67,7 +67,7 @@ class Header extends Component {
                             onClick={() => this.closeNav()}
                         >
                             <NavLink to='/about-us'>who we are</NavLink>
-                        </li>
+                        </li> */}
 
                         <li
                             className='mobile-header-nav-list-item'
@@ -76,12 +76,12 @@ class Header extends Component {
                             <NavLink to='/contact'>contact</NavLink>
                         </li>
 
-                        <li
+                        {/* <li
                             className='mobile-header-nav-list-item'
                             onClick={() => this.closeNav()}
                         >
                             <NavLink to='/concept'>concept</NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </Fragment>

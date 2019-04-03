@@ -23,6 +23,9 @@
 
         &.-clicked {
             background-color: $dust-grey;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
         }
     }
 
@@ -32,6 +35,16 @@
         .employee-block-text {
             opacity: 1;
             transition: $opacity-ease-out;
+        }
+    }
+
+    .application-link {
+        color: $white;
+        align-self: flex-end;
+        text-decoration: none;
+
+        &:hover {
+            color: $goldenrod;
         }
     }
 }

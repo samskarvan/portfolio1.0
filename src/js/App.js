@@ -19,10 +19,10 @@ class App extends Component {
                 <div className='content'>
                     <Switch>
                         <Route exact path='/' component={Home} />
-                        <Route exact path='/services' component={Services} />
-                        <Route exact path='/about-us' component={About} />
+                        {/* <Route exact path='/services' component={Services} /> */}
+                        {/* <Route exact path='/about-us' component={About} /> */}
                         <Route exact path='/contact' component={Contact} />
-                        <Route exact path='/concept' component={Concept} />
+                        {/* <Route exact path='/concept' component={Concept} /> */}
                     </Switch>
                 </div>
                 <Footer />

@@ -21,7 +21,7 @@ class Header extends Component {
                         </NavLink>
                     </div>
                     <ul className='header-nav-list'>
-                        <li className='header-nav-list-item'>
+                        {/* <li className='header-nav-list-item'>
                             <NavLink to='/services' activeClassName='selected'>
                                 services
                             </NavLink>
@@ -30,17 +30,17 @@ class Header extends Component {
                             <NavLink to='/about-us' activeClassName='selected'>
                                 who we are
                             </NavLink>
-                        </li>
+                        </li> */}
                         <li className='header-nav-list-item'>
                             <NavLink to='/contact' activeClassName='selected'>
                                 contact
                             </NavLink>
                         </li>
-                        <li className='header-nav-list-item'>
+                        {/* <li className='header-nav-list-item'>
                             <NavLink to='/concept' activeClassName='selected'>
                                 concept
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
 

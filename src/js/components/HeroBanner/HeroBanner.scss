@@ -10,10 +10,22 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
     height: 500px;
     margin: -40px;
     margin-bottom: 40px;
     padding: 40px;
+
+    &-blurb {
+        align-self: center;
+        color: $white;
+        text-align: center;
+        width: 100%;
+    }
+
+    &-title {
+        text-transform: uppercase;
+    }
 }
 
 @media screen and ($desktop-down) {
