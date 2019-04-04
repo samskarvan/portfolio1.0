@@ -5,21 +5,21 @@ import './Footer.scss'
 class Footer extends Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            text: null,
+        }
     }
 
     render() {
         const footerItems = []
         const array = [
             {
-                content: `<li>Desert Concierge Collective</li>
-                          <li>Serving the Coachella Valley</li>`,
-            },
-            {
-                content: `<li>samskarvan@gmail.com</li>`,
-            },
-            {
-                content: `<li>github</li>
-                          <li>linkedin</li>`,
+                content: `<li>samskarvan@gmail.com</li>
+                        <li>
+                            <p>linkedIN</p>
+                            <p>github</p>
+                        </li>`,
             },
         ]
 
@@ -27,10 +27,13 @@ class Footer extends Component {
             const { content } = item
             footerItems.push(
                 <div className='footer-item' key={index}>
-                    <ul
-                        className='footer-list'
-                        dangerouslySetInnerHTML={{ __html: content }}
-                    />
+                    <div className='footer-item-social'>
+                        <li class='fab fa-github' />
+                        <li class='fab fa-linkedin-in' />
+                    </div>
+                    <a href='mailto:samskarvan@gmail.com?subject=saw your portfolio website'>
+                        <div>samskarvan@gmail.com</div>
+                    </a>
                 </div>,
             )
         })

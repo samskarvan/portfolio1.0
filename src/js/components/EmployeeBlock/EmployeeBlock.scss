@@ -2,8 +2,11 @@
 
 .employee-block {
     background-color: $dust-grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     flex-basis: 50%;
-    height: 200px;
+    height: 300px;
 
     &:nth-of-type(2) {
         margin-left: 10px;
@@ -11,7 +14,7 @@
 
     &-text {
         align-items: center;
-        background-color: $goldenrod;
+        background-color: rgba(225, 191, 69, 0.8); //         $goldenrod;
         color: $white;
         display: flex;
         height: 100%;
@@ -22,7 +25,7 @@
         transition: $opacity-ease-in;
 
         &.-clicked {
-            background-color: $dust-grey;
+            background-color: rgba(164, 163, 159, 0.95); //$dust-grey;
             flex-direction: column;
             justify-content: space-between;
             padding: 20px;
@@ -47,9 +50,17 @@
             color: $goldenrod;
         }
     }
+
+    &.elderscrolls {
+        background-image: url('../../../assets/es_home.png');
+    }
+
+    &.fallout {
+        background-image: url('../../../assets/fo_home.png');
+    }
 }
 
-@media screen and ($tablet-down) {
+@media screen and ($mobile-down) {
     .employee-block {
         &:nth-of-type(2) {
             margin-left: 0;

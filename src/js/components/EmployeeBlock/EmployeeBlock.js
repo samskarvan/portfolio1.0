@@ -27,11 +27,12 @@ class EmployeeBlock extends Component {
     render() {
         const { blockClicked } = this.state
         const {
-            employeeInfo: { name, bio, link },
+            employeeInfo: { name, bio, link, image_class: imageClass },
         } = this.props
+
         return (
             <div
-                className='employee-block'
+                className={`employee-block ${imageClass}`}
                 onClick={e => this.handleBlockClick(e)}
                 onMouseLeave={e => this.handleMouseLeave(e)}
             >
@@ -44,7 +45,7 @@ class EmployeeBlock extends Component {
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            View Live Site
+                            View Live Site >>
                         </a>
                     </div>
                 ) : (

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './ContentBlock.scss'
 
+import Typer from '../typer.js'
+
 class ContentBlock extends Component {
     constructor(props) {
         super(props)
@@ -20,25 +22,30 @@ class ContentBlock extends Component {
 
         const contentImage = image ? (
             <div className='content-block-image'>
-                <div className='content-block-image-text'>
-                    {imageHoverContent
-                        ? imageHoverContent
-                        : `Veggies es bonus vobis, proinde vos postulo essum magis
+                <div
+                    className='content-block-image-text'
+                    dangerouslySetInnerHTML={
+                        imageHoverContent
+                            ? { __html: imageHoverContent }
+                            : `Veggies es bonus vobis, proinde vos postulo essum magis
                     kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
-                    azuki bean garlic.`}
-                </div>
+                    azuki bean garlic.`
+                    }
+                />
             </div>
         ) : (
             ''
         )
 
         return (
-            <div className='content-block'>
+            <div className='content-block section'>
                 <div className='content-block-container'>
                     {contentImage}
                     <div className='content-block-text'>
                         <h1 className='content-block-text-header'>
-                            {title ? title : `Our Services`}
+                            <Typer
+                                textToType={title ? title : `Our Services`}
+                            />
                         </h1>
                         <p>
                             {description

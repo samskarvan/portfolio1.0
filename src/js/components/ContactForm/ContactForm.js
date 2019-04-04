@@ -60,10 +60,11 @@ class ContactForm extends Component {
                                     Let's Connect!
                                 </h1>
                                 <p>
-                                    Nori grape silver beet broccoli kombu beet
-                                    greens fava bean potato quandong celery.
-                                    Bunya nuts black-eyed pea prairie turnip
-                                    leek lentil turnip greens parsnip.
+                                    Are you looking for someone to help build
+                                    your passion project, take your online
+                                    presence to the next level or join your team
+                                    of developers? Please drop me a line; I'd
+                                    love to hear from you.
                                 </p>
                             </div>
                             <form>

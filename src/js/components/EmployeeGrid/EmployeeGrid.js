@@ -13,19 +13,16 @@ class EmployeeGrid extends Component {
         const employees = [
             {
                 name: `Fallout GameHub`,
-                bio: `Nori grape silver beet broccoli kombu beet greens fava
-                        bean potato quandong celery. Bunya nuts black-eyed pea
-                        prairie turnip leek lentil turnip greens parsnip.`,
+                bio: `A ground-up front end refactor from handlebars.js and vanilla JS to React with a PHP 7 / Laravel backend.`,
                 link: `fallout.bethesda.net`,
+                image_class: `fallout`,
             },
             {
                 name: `ElderScrolls Gamehub`,
-                bio: `Nori grape silver beet broccoli kombu beet greens fava
-                        bean potato quandong celery. Bunya nuts black-eyed pea
-                        prairie turnip leek lentil turnip greens parsnip.`,
+                bio: `Server side rendered Vue.js with PHP. I am the sole creator of the news article and 25th anniversary pages.`,
                 link: `https://elderscrolls.bethesda.net`,
+                image_class: `elderscrolls`,
             },
-            ,
         ]
         const employeeBlocks = []
 
@@ -38,7 +35,7 @@ class EmployeeGrid extends Component {
         return (
             <div className='employee-grid section'>
                 <div className='employee-grid-container'>
-                    <h1 className='header'>Featured Applications</h1>
+                    <h1 className='header'>Current Applications</h1>
                     <div className='employee-grid-block-container'>
                         {employeeBlocks}
                     </div>

@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-@media screen and ($tablet-down) {
+@media screen and ($mobile-down) {
     .employee-grid-block-container {
         flex-direction: column;
     }
