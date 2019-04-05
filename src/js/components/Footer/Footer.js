@@ -26,15 +26,37 @@ class Footer extends Component {
         array.forEach((item, index) => {
             const { content } = item
             footerItems.push(
-                <div className='footer-item' key={index}>
+                // <div className='footer-item' key={index}>
+                <Fragment>
                     <div className='footer-item-social'>
-                        <li class='fab fa-github' />
-                        <li class='fab fa-linkedin-in' />
+                        <a
+                            href='https://github.com/sskarvan-verys'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <span class='fab fa-github' />
+                        </a>
+                        <a
+                            href='https://www.linkedin.com/in/samantha-skarvan-713773157/'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <span class='fab fa-linkedin-in' />
+                        </a>
+
+                        <a
+                            href='https://github.com/samskarvan'
+                            target='_blank'
+                            rel='noopener noreferrer'
+                        >
+                            <span class='fab fa-github' />
+                        </a>
                     </div>
                     <a href='mailto:samskarvan@gmail.com?subject=saw your portfolio website'>
                         <div>samskarvan@gmail.com</div>
                     </a>
-                </div>,
+                    {/* // </div>, */}
+                </Fragment>,
             )
         })
 
