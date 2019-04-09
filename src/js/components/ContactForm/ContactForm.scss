@@ -74,6 +74,14 @@
             }
         }
     }
+
+    .form-refresh-btn {
+        cursor: pointer;
+
+        &:hover {
+            color: $goldenrod;
+        }
+    }
 }
 
 .contact-form-image {

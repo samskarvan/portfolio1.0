@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 import './ContactForm.scss'
 
@@ -12,7 +13,10 @@ class ContactForm extends Component {
         this.messageInput = React.createRef()
 
         this.state = {
-            formSubmitted: false,
+            formSubmitted: {
+                status: false,
+                message: null,
+            },
         }
     }
 
@@ -25,33 +29,62 @@ class ContactForm extends Component {
             message: this.messageInput.current.value,
         }
 
-        // dispatch action to send email with form contents
+        axios
+            .post('http://localhost:8000/email', {
+                ...formContent,
+            })
+            .then(res => {
+                if (res.status === 200) {
+                    console.log('Message Sent.')
+                } else if (res.status === 500) {
+                    console.log('Message failed to send.')
+                }
 
+                this.setState({
+                    formSubmitted: {
+                        status: true,
+                        message:
+                            res.status === 200 ? (
+                                'Your message has been sent. Thank you!'
+                            ) : (
+                                <div>
+                                    An error occurred while sending your
+                                    message.
+                                    <p
+                                        className='form-refresh-btn'
+                                        onClick={e => this.refreshForm(e)}
+                                    >
+                                        Please try again
+                                    </p>
+                                </div>
+                            ),
+                    },
+                })
+            })
+    }
+
+    refreshForm(e) {
         this.setState({
-            formSubmitted: true,
+            formSubmitted: {
+                status: false,
+                message: null,
+            },
         })
-
-        console.log(
-            '='.repeat(10),
-            'content',
-            '='.repeat(10),
-            '\n',
-            formContent,
-            this.state,
-        )
     }
 
     render() {
-        const { formSubmitted } = this.state
+        const {
+            formSubmitted: { status, message },
+        } = this.state
 
         return (
             <div className='contact-form'>
                 <div className='contact-form-container'>
                     <div className='contact-form-image' />
 
-                    {formSubmitted ? (
+                    {status ? (
                         <div className='contact-form-form -submitted'>
-                            form has been submitted!
+                            {message}
                         </div>
                     ) : (
                         <div className='contact-form-form'>
