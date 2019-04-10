@@ -55,7 +55,7 @@ app.post('/email', (req, res) => {
             })
         } else {
             console.log('Email sent successfully ' + info.response)
-            res.status(500).send({
+            res.status(200).send({
                 data: 'success!',
             })
         }
