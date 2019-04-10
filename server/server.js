@@ -5,7 +5,7 @@ const path = require('path')
 const { USERNAME, PASSWORD } = require('./mail_config.js')
 
 const app = express()
-const PORT = 80
+const PORT = 8000
 
 // Consume middleware
 app.use(express.json())
