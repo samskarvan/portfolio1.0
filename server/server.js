@@ -34,6 +34,9 @@ app.get('/resume', (req, res) => {
     const file_name = path.resolve('./src/assets/samantha_skarvan_resume.pdf')
     res.download(file_name, 'sam_skarvan_resume.pdf')
 })
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 app.post('/email', (req, res) => {
     const { name, email, subject, message } = req.body
@@ -64,11 +67,4 @@ app.post('/email', (req, res) => {
 
 app.listen(PORT, '127.0.0.1', function(req, res) {
     console.log('Dime ', PORT)
-    console.log(
-        '='.repeat(10),
-        'path',
-        '='.repeat(10),
-        '\n',
-        path.resolve('./src/assets/samantha_skarvan_resume.pdf'),
-    )
 })
