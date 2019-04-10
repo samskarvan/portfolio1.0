@@ -29,7 +29,13 @@ app.get('/', (req, res) => {
     res.send('hey babes')
 })
 
-// HTTP POST route to accept POST data from
+app.get('/resume', (req, res) => {
+    res.download(
+        '/Users/samskarvan/Desktop/personal/portfolio1.0/src/assets/samantha_skarvan_resume.pdf',
+        'sam_skarvan_resume.pdf',
+    )
+})
+
 app.post('/email', (req, res) => {
     const { name, email, subject, message } = req.body
 
@@ -58,5 +64,5 @@ app.post('/email', (req, res) => {
 })
 
 app.listen(PORT, function(req, res) {
-    console.log("Yo, we're cooking up something hot on PORT: ", PORT)
+    console.log('Dime ', PORT)
 })
