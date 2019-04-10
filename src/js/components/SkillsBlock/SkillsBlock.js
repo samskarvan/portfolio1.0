@@ -73,7 +73,7 @@ class SkillsBlock extends Component {
                             effectivley. My experience is further detailed in my{' '}
                             <a
                                 className='content-block-text-download'
-                                href='dev.samskarvan.com/resume'
+                                href='/resume'
                                 download='sam_skarvan_resume'
                                 target='_blank'
                                 rel='noopener noreferrer'
