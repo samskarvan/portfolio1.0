@@ -1,6 +1,7 @@
 // Require modules
 const express = require('express')
 const nodemailer = require('nodemailer')
+const path = require('path')
 const { USERNAME, PASSWORD } = require('./mail_config.js')
 
 const app = express()
@@ -30,10 +31,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/resume', (req, res) => {
-    res.download(
-        '/Users/samskarvan/Desktop/personal/portfolio1.0/src/assets/samantha_skarvan_resume.pdf',
-        'sam_skarvan_resume.pdf',
-    )
+    const file_name = path.resolve('./src/assets/samantha_skarvan_resume.pdf')
+    res.download(file_name, 'sam_skarvan_resume.pdf')
 })
 
 app.post('/email', (req, res) => {
