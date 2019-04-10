@@ -64,4 +64,11 @@ app.post('/email', (req, res) => {
 
 app.listen(PORT, function(req, res) {
     console.log('Dime ', PORT)
+    console.log(
+        '='.repeat(10),
+        'path',
+        '='.repeat(10),
+        '\n',
+        path.resolve('./src/assets/samantha_skarvan_resume.pdf'),
+    )
 })
