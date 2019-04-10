@@ -51,19 +51,21 @@ class Header extends Component {
                     </button>
                     <ul className='mobile-header-nav-list'>
                         <NavLink to='/'>
-                            Home
                             <li
                                 className='mobile-header-nav-list-item'
                                 onClick={() => this.closeNav()}
-                            />
+                            >
+                                Home
+                            </li>
                         </NavLink>
 
                         <NavLink to='/contact'>
-                            contact
                             <li
                                 className='mobile-header-nav-list-item'
                                 onClick={() => this.closeNav()}
-                            />
+                            >
+                                contact
+                            </li>
                         </NavLink>
                     </ul>
                 </div>
