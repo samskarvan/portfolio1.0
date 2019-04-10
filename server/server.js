@@ -62,7 +62,7 @@ app.post('/email', (req, res) => {
     res.end()
 })
 
-app.listen(PORT, function(req, res) {
+app.listen(PORT, '127.0.0.1', function(req, res) {
     console.log('Dime ', PORT)
     console.log(
         '='.repeat(10),
