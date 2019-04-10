@@ -30,7 +30,7 @@ class ContactForm extends Component {
         }
 
         axios
-            .post('http://localhost:8000/email', {
+            .post('/email', {
                 ...formContent,
             })
             .then(res => {
