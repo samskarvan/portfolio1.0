@@ -27,21 +27,21 @@ class Footer extends Component {
             const { content } = item
             footerItems.push(
                 // <div className='footer-item' key={index}>
-                <Fragment>
+                <Fragment key={index}>
                     <div className='footer-item-social'>
                         <a
                             href='https://github.com/sskarvan-verys'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <span class='fab fa-github' />
+                            <span className='fab fa-github' />
                         </a>
                         <a
                             href='https://www.linkedin.com/in/samantha-skarvan-713773157/'
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <span class='fab fa-linkedin-in' />
+                            <span className='fab fa-linkedin-in' />
                         </a>
 
                         <a
@@ -49,13 +49,12 @@ class Footer extends Component {
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <span class='fab fa-github' />
+                            <span className='fab fa-github' />
                         </a>
                     </div>
                     <a href='mailto:samskarvan@gmail.com?subject=saw your portfolio website'>
                         <div>samskarvan@gmail.com</div>
                     </a>
-                    {/* // </div>, */}
                 </Fragment>,
             )
         })

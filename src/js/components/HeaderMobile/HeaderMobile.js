@@ -37,13 +37,15 @@ class Header extends Component {
                         displayNav ? '-opened' : ''
                     }`}
                 >
-                    <div className='mobile-header-nav-logo'>LOGO</div>
+                    <div className='mobile-header-nav-logo'>
+                        <NavLink to='/'>LOGO</NavLink>
+                    </div>
                     <button
                         type='button'
                         className={`icon headermobile-icon ${
                             displayNav ? 'opened' : ''
                         }`}
-                        onClick={(): Function => this.toggleNav()}
+                        onClick={() => this.toggleNav()}
                     >
                         <span />
                     </button>
@@ -55,33 +57,12 @@ class Header extends Component {
                             <NavLink to='/'>Home</NavLink>
                         </li>
 
-                        {/* <li
-                            className='mobile-header-nav-list-item'
-                            onClick={() => this.closeNav()}
-                        >
-                            <NavLink to='/services'>services</NavLink>
-                        </li>
-
-                        <li
-                            className='mobile-header-nav-list-item'
-                            onClick={() => this.closeNav()}
-                        >
-                            <NavLink to='/about-us'>who we are</NavLink>
-                        </li> */}
-
                         <li
                             className='mobile-header-nav-list-item'
                             onClick={() => this.closeNav()}
                         >
                             <NavLink to='/contact'>contact</NavLink>
                         </li>
-
-                        {/* <li
-                            className='mobile-header-nav-list-item'
-                            onClick={() => this.closeNav()}
-                        >
-                            <NavLink to='/concept'>concept</NavLink>
-                        </li> */}
                     </ul>
                 </div>
             </Fragment>

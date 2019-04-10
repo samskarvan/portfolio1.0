@@ -44,15 +44,20 @@ class SkillsBlock extends Component {
             'responsive design',
             'visual studio',
             'AWS',
+            'Flow',
+            'Jest',
             'Contentful',
             'Webpack',
+            'Shopify',
             'wireframing / prototyping',
         ]
 
-        const tech = technologies.map(tech => <li>{tech}</li>)
-        tools = tools.map(tool => <li>{tool}</li>)
-
-        console.log('='.repeat(10), 'tech', '='.repeat(10), '\n', tech)
+        const tech = technologies.map((tech, index) => (
+            <li key={`tech-${index}`}>{tech}</li>
+        ))
+        tools = tools.map((tool, index) => (
+            <li key={`tools-${index}`}>{tool}</li>
+        ))
 
         return (
             <div className='content-block section'>
@@ -65,7 +70,16 @@ class SkillsBlock extends Component {
                             I'm firm believer in finding the best tool for the
                             job. Here's a sample of some tech I'm passionate
                             about, and the tools I employ to use them
-                            effectivley.
+                            effectivley. My experience is further detailed in my{' '}
+                            <a
+                                className='content-block-text-download'
+                                href='localhost:8000/resume'
+                                download='sam_skarvan_resume'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                resume
+                            </a>
                         </p>
                         <div className='skills-container'>
                             <div className='tech-container'>

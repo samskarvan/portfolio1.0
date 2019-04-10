@@ -30,8 +30,18 @@
         margin-bottom: 40px;
     }
 
+    &-download {
+        color: $sage;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+            color: $goldenrod;
+        }
+    }
+
     .skills-container {
-        background-color: $dust-grey;
+        background-color: #a7b7b0; //dbc7c7; //$blush-pink; //dust-grey;
         color: $dust-grey;
         display: flex;
         justify-content: space-between;
@@ -39,7 +49,7 @@
 
         .tech-container,
         .tools-container {
-            background-color: $blush-pink;
+            background-color: $white;
             flex-basis: 50%;
             padding: 10px;
 
