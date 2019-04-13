@@ -14,7 +14,7 @@
 
     &-text {
         align-items: center;
-        background-color: rgba(225, 191, 69, 0.8); //         $goldenrod;
+        background-color: rgba(225, 191, 69, 0.8);
         color: $white;
         display: flex;
         height: 100%;
@@ -25,7 +25,7 @@
         transition: $opacity-ease-in;
 
         &.-clicked {
-            background-color: rgba(164, 163, 159, 0.95); //$dust-grey;
+            background-color: rgba(164, 163, 159, 0.95);
             flex-direction: column;
             justify-content: space-between;
             padding: 20px;

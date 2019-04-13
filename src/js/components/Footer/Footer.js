@@ -13,20 +13,10 @@ class Footer extends Component {
 
     render() {
         const footerItems = []
-        const array = [
-            {
-                content: `<li>samskarvan@gmail.com</li>
-                        <li>
-                            <p>linkedIN</p>
-                            <p>github</p>
-                        </li>`,
-            },
-        ]
+        const array = [1]
 
         array.forEach((item, index) => {
-            const { content } = item
             footerItems.push(
-                // <div className='footer-item' key={index}>
                 <Fragment key={index}>
                     <div className='footer-item-social'>
                         <a

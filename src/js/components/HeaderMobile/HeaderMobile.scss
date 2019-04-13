@@ -3,14 +3,12 @@
 .mobile-header-nav {
     background-color: $white;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    text-transform: uppercase;
-
-    // to make nav bar fixed at top of viewport
-    box-sizing: border-box;
     position: fixed;
+    text-transform: uppercase;
     top: 0;
     width: 100%;
     z-index: 1;
@@ -45,7 +43,6 @@
     }
 
     &-list {
-        // align-items: flex-end;
         background-color: $white;
         display: none;
         flex-direction: column;
@@ -75,7 +72,7 @@
         }
 
         a {
-            color: $black;
+            color: $dark-grey;
             text-decoration: none;
         }
     }

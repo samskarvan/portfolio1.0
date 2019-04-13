@@ -35,13 +35,7 @@ app.get('/resume', (req, res) => {
     res.download(file_name, 'sam_skarvan_resume.pdf')
 })
 app.get('/*', function(req, res) {
-    console.log(
-        '='.repeat(10),
-        'hitting the proper route',
-        '='.repeat(10),
-        '\n',
-    )
-    res.sendFile(path.join('../', __dirname, 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, '../build', 'index.html'))
 })
 
 app.post('/email', (req, res) => {
