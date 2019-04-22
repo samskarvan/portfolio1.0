@@ -10,8 +10,7 @@ class Typer extends Component {
     }
 
     typeWriter = (text, i) => {
-        let { textToType } = this.props
-        var speed = 50
+        let { textToType, speed = 100 } = this.props
         if (i < textToType.length) {
             text += textToType.charAt(i)
             this.setState({

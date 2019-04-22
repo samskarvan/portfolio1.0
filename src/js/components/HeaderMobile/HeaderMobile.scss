@@ -34,8 +34,18 @@
     }
 
     &-logo {
-        background-color: $goldenrod;
         height: 20%;
+
+        &-asset {
+            background-image: url('../../../assets/logo.svg');
+            background-position: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: -5px;
+            height: 50px;
+            margin: -10px 0;
+            width: 50px;
+        }
 
         a {
             text-decoration: none;
@@ -49,6 +59,7 @@
         height: 100vh;
         list-style-type: none;
         padding: 0px;
+        text-align: center;
         text-decoration: none;
         width: 100%;
 
@@ -58,7 +69,7 @@
             padding: 20px;
 
             &:hover {
-                background-color: $sage;
+                background-color: rgba(167, 183, 176, 0.7);
                 border-color: $goldenrod;
 
                 a {
@@ -74,6 +85,10 @@
         a {
             color: $dark-grey;
             text-decoration: none;
+
+            &:not(:last-of-type) {
+                margin-bottom: 15px;
+            }
         }
     }
 }

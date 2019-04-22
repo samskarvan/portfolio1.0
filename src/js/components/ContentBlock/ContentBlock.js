@@ -5,10 +5,6 @@ import './ContentBlock.scss'
 import Typer from '../typer.js'
 
 class ContentBlock extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const {
             image = true,
@@ -43,9 +39,7 @@ class ContentBlock extends Component {
                     {contentImage}
                     <div className='content-block-text'>
                         <h1 className='content-block-text-header'>
-                            <Typer
-                                textToType={title ? title : `Our Services`}
-                            />
+                            {title ? title : `Our Services`}
                         </h1>
                         <p>
                             {description

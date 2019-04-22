@@ -17,30 +17,15 @@ class Header extends Component {
                 <div className='header-nav'>
                     <div className='header-nav-logo'>
                         <NavLink to='/' activeClassName='selected'>
-                            Logo
+                            <div className='header-nav-logo-asset' />
                         </NavLink>
                     </div>
                     <ul className='header-nav-list'>
-                        {/* <li className='header-nav-list-item'>
-                            <NavLink to='/services' activeClassName='selected'>
-                                services
-                            </NavLink>
-                        </li>
-                        <li className='header-nav-list-item'>
-                            <NavLink to='/about-us' activeClassName='selected'>
-                                who we are
-                            </NavLink>
-                        </li> */}
                         <li className='header-nav-list-item'>
                             <NavLink to='/contact' activeClassName='selected'>
                                 contact
                             </NavLink>
                         </li>
-                        {/* <li className='header-nav-list-item'>
-                            <NavLink to='/concept' activeClassName='selected'>
-                                concept
-                            </NavLink>
-                        </li> */}
                     </ul>
                 </div>
 

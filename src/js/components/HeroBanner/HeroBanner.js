@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import './HeroBanner.scss'
 
+import Typer from '../typer.js'
+
 class HeroBanner extends Component {
     constructor(props) {
         super(props)
@@ -17,12 +19,20 @@ class HeroBanner extends Component {
                 {header ? (
                     <div className='hero-banner-blurb'>
                         {header ? (
-                            <h1 className='hero-banner-title'>{header}</h1>
+                            <h1 className='hero-banner-title'>
+                                <Typer
+                                    textToType={
+                                        header ? header : `Samantha Skarvan`
+                                    }
+                                />
+                            </h1>
                         ) : (
                             ''
                         )}
                         {subtitle ? (
-                            <p className='hero-banner-text'>{subtitle}</p>
+                            <p className='hero-banner-text'>
+                                <Typer textToType={subtitle} />
+                            </p>
                         ) : (
                             ''
                         )}

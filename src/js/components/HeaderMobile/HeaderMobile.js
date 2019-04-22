@@ -38,7 +38,9 @@ class Header extends Component {
                     }`}
                 >
                     <div className='mobile-header-nav-logo'>
-                        <NavLink to='/'>LOGO</NavLink>
+                        <NavLink to='/'>
+                            <div className='mobile-header-nav-logo-asset' />
+                        </NavLink>
                     </div>
                     <button
                         type='button'
