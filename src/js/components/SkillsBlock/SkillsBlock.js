@@ -36,7 +36,7 @@ class SkillsBlock extends Component {
         ]
 
         let tools = [
-            'agile methodologies, especially kanban',
+            'agile methodologies',
             'git',
             'jira',
             'hansoft',

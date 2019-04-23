@@ -27,7 +27,7 @@ class Home extends Component {
                         subtitle: 'software engineer',
                     }}
                 />
-                <ContentBlock content={this.bio} />
+                <ContentBlock content={this.bio} image={false} />
                 <EmployeeGrid />
                 <SkillsBlock />
             </Fragment>
